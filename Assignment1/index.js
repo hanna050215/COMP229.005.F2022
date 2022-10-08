@@ -19,6 +19,51 @@ function checkvalid(){
     }
     else{
         alert("Successfully submitted!");
-        window.location ="https://goodmemory.tistory.com/45";
+        window.location ="http://hoeng12.byethost7.com/Assignment1/index.html";
     }
 }
+var express = require('express');
+var router = express.Router();
+
+
+router.get('/', function(req, res, next) {
+  res.render(
+    'index', 
+    { 
+      title: 'Home', 
+      name: 'Farzana' 
+    }
+  );
+});
+
+router.get('/project', function(req, res, next) {
+  res.render(
+    'projectservices', 
+    { 
+      title: 'Project',
+    }
+  );
+});
+
+router.get('/service', function(req, res, next) {
+  res.render(
+    'projectservices', 
+    { 
+      title: 'Service',
+    }
+  );
+});
+
+
+
+router.get('/contact', function(req, res, next) {
+  res.render(
+    'index', 
+    { 
+      title: 'Contact Me',
+      name: 'Farzana' 
+    }
+  );
+});
+
+module.exports = router;
